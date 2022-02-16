@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+
+    <title>Aplicação de preços de Criptomoedas</title>
+</head>
+<body>
+    <div class="container" id="app">
+        <h3 class="text-center">Preços de Criptomoedas</h3>
+        
+
+        <div class="columns medium-4" v-for="(results, index) in results">
+            <div class="card">
+                <div class="card-section">
+                    <p>{{ index }}</p>
+                </div>
+                <div class="card-divider">
+                    <p> $ {{ results.USD }}</p>
+                </div>
+                <div class="card-section">
+                    <p> &#8364 {{ results.EUR }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="vueApp.js"></script>
+</body>
+</html>
